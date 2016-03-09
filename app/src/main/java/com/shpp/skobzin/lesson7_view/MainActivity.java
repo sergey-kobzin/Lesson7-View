@@ -13,16 +13,5 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        final Flag flag = (Flag) findViewById(R.id.flag);
-
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                flag.reDraw();
-                handler.postDelayed(this, 3000);
-            }
-        }, 3000);
     }
 }
